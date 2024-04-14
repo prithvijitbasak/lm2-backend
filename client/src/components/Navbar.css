@@ -1,0 +1,35 @@
+
+
+.container {
+    max-width: 140rem;
+    padding: 4.2rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .logo-brand a {
+    text-decoration: none;
+    color: #646cff;
+}
+
+nav {
+    display: flex;
+    gap: 3.2rem;
+}
+
+nav li {
+    list-style: none;
+    cursor: pointer;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #646cff;
+    cursor: pointer;
+}
+
+nav li a:hover,
+nav li a.active {
+    color: #fff;
+    cursor: pointer;
+}
