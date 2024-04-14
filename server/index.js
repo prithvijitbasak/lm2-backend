@@ -12,16 +12,16 @@ const errorMiddleware = require("./middlewares/errorMiddleware");
 const PORT = process.env.PORT;
 
 // middlewares to handle requests from different origins
-// const corsOptions = {
-//   origin: 'http://localhost:5173/',
-//   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
-//   credentials: true,
-//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
+const corsOptions = {
+  origin: '*',
+  methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+  credentials: true,
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
-app.use(cors());
+// app.use(cors());
 
 // middlewares to use json
 app.use(express.json());
