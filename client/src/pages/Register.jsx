@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const URL = "http://localhost:5000/api/auth/register";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
 
@@ -11,9 +10,11 @@ export const Register = () => {
     phone: "",
     password: "",
   });
-
+  
   const navigate = useNavigate();
-  const { storeTokenInLS } = useAuth();
+  const { storeTokenInLS, API } = useAuth();
+  
+  const URL = `${API}/api/auth/register`;
 
   const handleInput = (e) => {
     let name = e.target.name;
