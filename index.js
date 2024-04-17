@@ -9,7 +9,7 @@ const connectDb = require("./utils/db");
 const cors = require("cors");
 var bodyParser = require("body-parser");
 const errorMiddleware = require("./middlewares/errorMiddleware");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT | 5000;
 
 // middlewares to handle requests from different origins
 const corsOptions = {
